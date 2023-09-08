@@ -32,6 +32,16 @@ class Viking {
     receiveDamage(damage) {
 
         this.health = this.health - damage
+
+        if (this.health > 0) {
+          return `${this.name} has recieved ${damage} points of damage`
+        }
+        
+        else {
+           return `${this.name} has died in act of combat`
+        }
+
+        return this.health
     }
 
     battleCry (){
@@ -56,9 +66,16 @@ class Saxon {
 
     receiveDamage(damage) {
         this.health = this.health - damage
-    }
 
-}
+        if (this.health > 0) {
+            return `A Saxon has recieved ${damage} points of damage`
+          }
+          
+          else {
+             return `A Saxon has died in combat`
+          }
+    }
+}    
 
 
 
